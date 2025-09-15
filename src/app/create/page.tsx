@@ -1,9 +1,10 @@
+import AllSteps from '@/components/steps/AllSteps';
 import React from 'react';
 
 const page = () => {
     return (
         <div>
-            Create page
+            <AllSteps />
         </div>
     );
 };
