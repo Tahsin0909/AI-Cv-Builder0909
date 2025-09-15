@@ -38,20 +38,30 @@ const stepsData: step[] = [
 
 const AllSteps = () => {
     return (
-        <div >
-            <div className='flex gap-2 items-center justify-center'>
+        <div className='max-w-7xl mx-auto'>
+            <div className='grid grid-cols-7'>
                 {
                     stepsData?.map((step) => (
-                        <div key={step.step} className='flex flex-col items-center border '>
-                            <div className='rounded-full bg-blue-500 text-white w-8 h-8 flex items-center justify-center mb-2'>
-                                {step.step}
+                        <div key={step.step} className='  relative w-full'>
+                            <div className={`p-[2px] top-1/4  ${step.step === 1 ? "bg-blue-500 w-1/2 right-0" : step.step === 7 ? "bg-blue-500 w-1/2" : "bg-blue-500 w-full"} absolute `}>
+
                             </div>
-                            <h3>{step.label}</h3>
+                            <div className='flex flex-col items-center justify-center relative m-3 max-w-[150px]'>
+                                <div
+                                    style={{
+                                        background: "linear-gradient(46deg, #017AFF 37.44%, #61BDFF 67.11%)"
+                                    }}
+                                    className='rounded-full text-white w-12 h-12 text-xl font-bold flex items-center justify-center mb-2'>
+                                    {step.step}
+                                </div>
+                                <h3 className='text-center text-lg font-bold'>{step.label}</h3>
+                            </div>
                         </div>
+
                     ))
                 }
             </div>
-        </div>
+        </div >
     );
 };
 
