@@ -34,7 +34,11 @@ const stepsData: step[] = [
         label: "Review & Download"
     },
     {
-        step: 7,
+        step: 8,
+        label: "Review & Download"
+    },
+    {
+        step: 9,
         label: "Review & Download"
     }
 ]
