@@ -38,15 +38,16 @@ const stepsData: step[] = [
 
 const AllSteps = () => {
     return (
-        <div className='max-w-7xl mx-auto'>
-            <div className='grid grid-cols-7'>
+        <div className='max-w-7xl mx-auto relative '>
+            {/* line  */}
+            <div className="border p-1 absolute top-1/4 w-[90%] right-0 left-0" />
+            <div className='grid grid-cols-7 relative'>
                 {
                     stepsData?.map((step) => (
                         <div key={step.step} className='  relative w-full'>
 
-                            {/* line */}
                             <div className={`p-[3px] top-1/4 border ${step.step === 1 ? " w-1/2 right-0" : step.step === 7 ? " w-1/2" : " w-full"} absolute `} >
-                                <div className='p-[1px] bg-white'></div>
+                                <div className='p-[1px] bg-blue-500'></div>
                             </div>
 
 
