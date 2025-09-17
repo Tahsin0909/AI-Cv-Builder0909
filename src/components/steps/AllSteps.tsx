@@ -32,14 +32,6 @@ const stepsData: step[] = [
     {
         step: 7,
         label: "Review & Download"
-    },
-    {
-        step: 8,
-        label: "Review & Download"
-    },
-    {
-        step: 9,
-        label: "Review & Download"
     }
 ]
 
@@ -51,9 +43,13 @@ const AllSteps = () => {
                 {
                     stepsData?.map((step) => (
                         <div key={step.step} className='  relative w-full'>
-                            <div className={`p-[2px] top-1/4  ${step.step === 1 ? "bg-blue-500 w-1/2 right-0" : step.step === 7 ? "bg-blue-500 w-1/2" : "bg-blue-500 w-full"} absolute `}>
 
+                            {/* line */}
+                            <div className={`p-[3px] top-1/4 border ${step.step === 1 ? " w-1/2 right-0" : step.step === 7 ? " w-1/2" : " w-full"} absolute `} >
+                                <div className='p-[1px] bg-white'></div>
                             </div>
+
+
                             <div className='flex flex-col items-center justify-center relative m-3 max-w-[150px]'>
                                 <div
                                     style={{
